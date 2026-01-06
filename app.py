@@ -197,7 +197,7 @@ if "df_model" not in locals():
     st.error("Please load a cleaned dataset first")
     st.stop()
 
-target = st.selectbox("Select target column", "species")
+target = st.selectbox("Select target column", df_model.columns)
 
 y = df_model[target]
 if y.dtype == "object":
